@@ -13,6 +13,7 @@ import Clients from './components/Clients.jsx';
 import Footer from './components/Footer.jsx';
 import useScrollReveal from './hooks/useScrollReveal.js';
 
+
 function App() {
   const [loading, setLoading] = useState(true);
   useScrollReveal(!loading);
