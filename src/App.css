@@ -177,57 +177,116 @@
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .brand-mark {
   display: inline-flex;
-  align-items: center;
-  gap: 0.85rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
   text-transform: uppercase;
 }
 
-.brand-logo {
-  width: clamp(120px, 10vw, 175px);
-  filter: invert(1);
+.brand-logo-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: clamp(1.2rem, 3.2vw, 1.75rem);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.brand-logo-initial {
+  font-size: 1.1em;
+  font-weight: 800;
+  color: #f9f5da;
+}
+
+.brand-logo-divider {
+  width: 2px;
+  height: 1.5rem;
+  display: inline-block;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+}
+
+.brand-logo-name {
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .brand-tagline {
   font-size: 0.75rem;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.28em;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .header-whatsapp {
-  --size: 48px;
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.35);
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-cream);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  font-weight: 600;
   transition: transform 200ms ease, border-color 200ms ease, background 200ms ease;
-}
-
-.header-whatsapp svg {
-  width: 60%;
-  height: 60%;
-  fill: #0f0f0f;
-}
-
-.header-whatsapp circle {
-  fill: #f6f4ef;
-}
-
-.header-whatsapp path {
-  fill: var(--color-ink);
 }
 
 .header-whatsapp:hover {
   transform: translateY(-2px);
   border-color: var(--color-cream);
-  background: var(--color-cream);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.whatsapp-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  background: #25d366;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-icon svg {
+  width: 60%;
+  height: 60%;
+  fill: #fff;
+}
+
+.whatsapp-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .brand-logo-text {
+    letter-spacing: 0.2em;
+  }
+
+  .brand-tagline {
+    letter-spacing: 0.18em;
+  }
+
+  .header-whatsapp {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* ---------- HERO ---------- */
