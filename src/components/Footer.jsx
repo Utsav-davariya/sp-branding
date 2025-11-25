@@ -60,7 +60,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="box-md-12 box-xl-4 title-2 set_footer_contact">
-                <a href="tel:+919898919128">+91 9898 9191 28</a>
+                <a href="tel:+917778900614">+91 9898 9191 28</a>
               </div>
               <div className="box-md-12 box-xl-4 right-text">
                 <div className="mt-xl-4 mt-sm-1">
