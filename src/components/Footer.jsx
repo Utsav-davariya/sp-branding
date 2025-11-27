@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaFacebookF, FaInstagram, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 
 const Footer = () => {
   // Split long SVG path to avoid parser issues
@@ -23,62 +24,303 @@ const Footer = () => {
     'A 25.657 25.657 0 0 1 68.325 94.5 A 29.427 29.427 0 0 1 57.928 103.534 A 36.535 36.535 0 0 1 54.825 105 ',
     'A 45.782 45.782 0 0 1 43.71 108.006 A 60.041 60.041 0 0 1 35.1 108.6 A 71.05 71.05 0 0 1 23.437 107.681 ',
     'A 57.073 57.073 0 0 1 15.15 105.675 Q 6.15 102.75 0 97.95 Z'
-  ].join('');  // Join into single string
+  ].join('');
 
   return (
-    <footer data-nosnippet>
-      <div className="footer-wrap mt-xl-4 mt-sm-0 pt-xl-1">
-        <section className="sec-wrap set_footer_font_size">
-          <div className="sec-wrap__inner footer__main">
-            <div className="grid-wrap gap-xl-2 gap-md-1 mobileflex">
-              <div className="box-md-12 box-xl-4 bottom--vertical mobilebottom--vertical">
-                <div className="svg-holder">
-                  <svg className="set_footer_svg" viewBox="0 0 208.65 108.601" xmlns="http://www.w3.org/2000/svg">
-                    <g 
-                      id="svgGroup" 
-                      strokeLinecap="round" 
-                      fillRule="evenodd" 
-                      fontSize="9pt" 
-                      stroke="#000" 
-                      strokeWidth="0.25mm" 
-                      fill="none" 
-                      style={{ stroke: '#000', strokeWidth: '0.25mm', fill: 'none' }}
-                    >
-                      <path d={svgPathD} id="0" vectorEffect="non-scaling-stroke" />
-                      <path 
-                        d="M 179.4 103.05 L 166.35 108.3 L 154.65 78.3 L 106.05 78.3 L 94.35 108 L 82.2 103.05 L 123.3 1.8 L 138.9 1.8 L 179.4 103.05 Z M 130.35 15.9 L 110.55 66.3 L 150 66.3 L 130.35 15.9 Z" 
-                        id="1" 
-                        vectorEffect="non-scaling-stroke" 
-                      />
-                      <path 
-                        d="M 208.65 106.8 L 194.4 106.8 L 194.4 1.8 L 208.65 1.8 L 208.65 106.8 Z" 
-                        id="2" 
-                        vectorEffect="non-scaling-stroke" 
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-              <div className="box-md-12 box-xl-4 title-2 set_footer_contact">
-                <a href="tel:+917778900614">+91 9898 9191 28</a>
-              </div>
-              <div className="box-md-12 box-xl-4 right-text">
-                <div className="mt-xl-4 mt-sm-1">
-                  <a href="https://www.facebook.com/saibrandingofficial">
-                    <img className="set_social_icon" src="https://ik.imagekit.io/realdo/saibranding/facebook.png" alt="Facebook" />
-                  </a>
-                  <a href="https://www.google.com/maps/place/SAI+Branding/@23.185019,72.6202057,4031m/data=!3m1!1e3!4m6!3m5!1s0x395e8148ddea00e7:0x5e9baedd32417d9e!8m2!3d23.185019!4d72.6202057!16s%2Fg%2F11rjv0mcbg?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">
-                    <img className="set_social_icon" src="https://ik.imagekit.io/realdo/saibranding/social.png" alt="Google" />
-                  </a>
-                  <a href="https://www.instagram.com/thehouseofsai/">
-                    <img className="set_social_icon" src="https://ik.imagekit.io/realdo/saibranding/instagram.png" alt="Instagram" />
-                  </a>
-                </div>
-              </div>
-            </div>
+    <footer className="footer" style={{
+      backgroundColor: '#0a0a14',
+      color: 'white',
+      padding: '40px 5% 30px',
+      position: 'relative',
+      overflow: 'hidden',
+      borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+      '@media (min-width: 768px)': {
+        padding: '60px 5% 40px'
+      }
+    }}>
+      <div className="footer-content" style={{
+        maxWidth: '1400px',
+        margin: '0 auto',
+        display: 'flex',
+        flexDirection: 'column',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: '2.5rem',
+        '@media (min-width: 768px)': {
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'flex-start',
+          gap: '2rem'
+        }
+      }}>
+        {/* Logo */}
+        <div className="logo-container" style={{
+          flex: '0 1 auto',
+          width: '100%',
+          maxWidth: '250px',
+          display: 'flex',
+          justifyContent: 'center',
+          margin: '0 auto',
+          '@media (min-width: 768px)': {
+            margin: 0,
+            maxWidth: '300px',
+            flex: '1 1 300px'
+          },
+          '@media (min-width: 992px)': {
+            justifyContent: 'flex-start',
+            flex: '1 1 300px'
+          }
+        }}>
+          <div className="logo" style={{
+            width: '200px',
+            height: 'auto'
+          }}>
+            <svg viewBox="0 0 208.65 108.601" style={{
+              width: '100%',
+              height: 'auto',
+              fill: 'white'
+            }}>
+              <path d={svgPathD} id="0" vectorEffect="non-scaling-stroke" />
+              <path 
+                d="M 179.4 103.05 L 166.35 108.3 L 154.65 78.3 L 106.05 78.3 L 94.35 108 L 82.2 103.05 L 123.3 1.8 L 138.9 1.8 L 179.4 103.05 Z M 130.35 15.9 L 110.55 66.3 L 150 66.3 L 130.35 15.9 Z" 
+                id="1" 
+                vectorEffect="non-scaling-stroke" 
+              />
+              <path 
+                d="M 208.65 106.8 L 194.4 106.8 L 194.4 1.8 L 208.65 1.8 L 208.65 106.8 Z" 
+                id="2" 
+                vectorEffect="non-scaling-stroke" 
+              />
+            </svg>
           </div>
-        </section>
+        </div>
+
+        {/* Contact Info */}
+        <div className="contact-info" style={{
+          flex: '1 1 auto',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '1.5rem',
+          textAlign: 'center',
+          padding: '0 10px',
+          '@media (min-width: 768px)': {
+            maxWidth: '300px',
+            flex: '1 1 300px',
+            padding: 0
+          },
+          '@media (min-width: 992px)': {
+            alignItems: 'center'
+          }
+        }}>
+          <a href="tel:+919898919128" style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+            color: 'white',
+            textDecoration: 'none',
+            fontSize: '1.2rem',
+            fontWeight: 500,
+            transition: 'color 0.3s ease',
+            ':hover': {
+              color: '#4f8fff',
+              '& svg': {
+                transform: 'scale(1.1)'
+              }
+            }
+          }}>
+            <FaPhoneAlt style={{
+              fontSize: '1rem',
+              color: '#4f8fff',
+              transition: 'transform 0.3s ease'
+            }} />
+            +91 77789 00614
+          </a>
+          
+          {/* <a 
+            href="https://www.google.com/maps/place/SP+Branding/@23.185019,72.6202057,17z/data=!3m1!4b1!4m6!3m5!1s0x395e8148ddea00e7:0x5e9baedd32417d9e!8m2!3d23.185019!4d72.6202057!16s%2Fg%2F11rjv0mcbg?entry=ttu" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              color: 'rgba(255, 255, 255, 0.8)',
+              textDecoration: 'none',
+              fontSize: '0.9rem',
+              transition: 'color 0.3s ease',
+              textAlign: 'center',
+              ':hover': {
+                color: '#4f8fff',
+                '& svg': {
+                  transform: 'scale(1.1)'
+                }
+              }
+            }}
+          >
+            <FaMapMarkerAlt style={{
+              fontSize: '1rem',
+              color: '#4f8fff',
+              flexShrink: 0,
+              transition: 'transform 0.3s ease'
+            }} />
+            SP Branding, Gandhinagar, Gujarat, India
+          </a> */}
+        </div>
+
+        {/* Social Media */}
+        <div className="social-links" style={{
+          flex: '1 1 auto',
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '1.5rem',
+          marginTop: '1rem',
+          padding: '20px 0',
+          '@media (min-width: 768px)': {
+            maxWidth: '300px',
+            flex: '1 1 300px',
+            padding: 0,
+            marginTop: 0
+          },
+          '@media (min-width: 992px)': {
+            justifyContent: 'flex-end',
+            padding: 0
+          }
+        }}>
+          <a 
+            href="https://www.facebook.com/saibrandingofficial" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="social-icon"
+            style={{
+              width: '40px',
+              height: '40px',
+              borderRadius: '50%',
+              backgroundColor: 'rgba(255, 255, 255, 0.05)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'white',
+              fontSize: '1rem',
+              transition: 'all 0.3s ease',
+              ':hover': {
+                backgroundColor: '#4f8fff',
+                transform: 'translateY(-3px)',
+                boxShadow: '0 5px 15px rgba(79, 143, 255, 0.3)'
+              }
+            }}
+          >
+            <FaFacebookF />
+          </a>
+          
+          <a 
+            href="https://www.instagram.com/thehouseofsai/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="social-icon"
+            style={{
+              width: '40px',
+              height: '40px',
+              borderRadius: '50%',
+              backgroundColor: 'rgba(255, 255, 255, 0.05)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'white',
+              fontSize: '1rem',
+              transition: 'all 0.3s ease',
+              ':hover': {
+                background: 'linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)',
+                transform: 'translateY(-3px)',
+                boxShadow: '0 5px 15px rgba(188, 24, 136, 0.3)'
+              }
+            }}
+          >
+            <FaInstagram />
+          </a>
+          
+          {/* <a 
+            href="https://www.google.com/maps/place/SAI+Branding/@23.185019,72.6202057,17z/data=!3m1!4b1!4m6!3m5!1s0x395e8148ddea00e7:0x5e9baedd32417d9e!8m2!3d23.185019!4d72.6202057!16s%2Fg%2F11rjv0mcbg?entry=ttu" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="social-icon"
+            style={{
+              width: '40px',
+              height: '40px',
+              borderRadius: '50%',
+              backgroundColor: 'rgba(255, 255, 255, 0.05)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'white',
+              fontSize: '1rem',
+              transition: 'all 0.3s ease',
+              ':hover': {
+                backgroundColor: '#34a853',
+                transform: 'translateY(-3px)',
+                boxShadow: '0 5px 15px rgba(52, 168, 83, 0.3)'
+              }
+            }}
+          >
+            <FaMapMarkerAlt />
+          </a> */}
+        </div>
       </div>
+      
+      {/* Copyright */}
+      <div className="copyright" style={{
+        textAlign: 'center',
+        marginTop: '40px',
+        paddingTop: '20px',
+        borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+        color: 'rgba(255, 255, 255, 0.6)',
+        fontSize: '0.85rem',
+        width: '100%',
+        '@media (min-width: 768px)': {
+          marginTop: '60px'
+        }
+      }}>
+        &copy; {new Date().getFullYear()} SP Branding. All rights reserved.
+      </div>
+      
+      {/* Global Styles */}
+      <style jsx global>{`
+        @media (max-width: 767px) {
+          .footer-content {
+            text-align: center;
+          }
+          
+          .logo-container {
+            margin-bottom: 1rem;
+          }
+          
+          .social-links {
+            margin: 1rem 0;
+          }
+        }
+        
+        /* Better touch targets for mobile */
+        @media (max-width: 480px) {
+          .social-icon {
+            width: 44px !important;
+            height: 44px !important;
+            font-size: 1.1rem !important;
+          }
+          
+          .contact-info a {
+            font-size: 1rem !important;
+            padding: 8px 0;
+          }
+        }
+        
+        /* Smooth transitions */
+        .social-icon, .contact-info a {
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+      `}</style>
     </footer>
   );
 };
