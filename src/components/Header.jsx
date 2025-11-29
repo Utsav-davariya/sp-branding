@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImage from '../assets/sp branding_Mesa de trabajo 1.png';
+import logoImage from '../assets/sp_branding_Mesa_de_trabajo_2.png';
 
 const Header = () => {
   return (
@@ -41,7 +41,7 @@ const Header = () => {
           src={logoImage} 
           alt="SP Branding Logo"
           style={{
-            height: '200%',
+            height: '150%',
             width: 'auto',
             maxWidth: '280px',
             objectFit: 'contain',
