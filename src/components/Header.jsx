@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImage from '../assets/sp_branding_Mesa_de_trabajo_2.png';
+import logoImage from '../assets/sp_branding_swbsite-02.png';
 
 const Header = () => {
   return (
