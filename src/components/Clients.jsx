@@ -1,69 +1,64 @@
 import React from 'react';
+import './Clients.css';
 
 const Clients = () => {
-  // All logo URLs from original - group into holders (3 per holder, 4 holders per line, 3 lines)
-  const logos = [
-    // Line 1 Holder 1
-    'https://ik.imagekit.io/realdo/saibranding/logos/Samarth_Logo.webp',
-    'https://ik.imagekit.io/realdo/saibranding/logos/polaris_2.webp',
-    'https://ik.imagekit.io/realdo/saibranding/logos/psy_logo.webp',
-    // ... Add ALL 50+ logos here, e.g.,
-    'https://ik.imagekit.io/realdo/saibranding/logos/Bhagwat_Serenity.webp',
-    // Continue for all
+  // Array of professional business logos (using placeholder images from a CDN)
+  const clientLogos = [
+    // Business & Consulting
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopware/shopware-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sap/sap-original.svg',
+    
+    // Technology & Software
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/atlassian/atlassian-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg',
+    
+    // Creative & Design
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/adobe/adobe-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg',
+    
+    // Enterprise Solutions
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redhat/redhat-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg',
+    
+    // E-commerce & Services
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/magento/magento-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/woocommerce/woocommerce-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopify/shopify-original.svg'
   ];
 
-  // For demo, slice and repeat structure
-  const holders = Array.from({ length: 12 }, (_, h) => (
-    <div key={h} className="clients-list_holder">
-      <div className="client-list_shape one"></div>
-      <div className="client-list_overlay"></div>
-      {logos.slice(h*3, (h+1)*3).map((src, l) => (
-        <img key={l} src={src} alt="" className={`client-list_logo_img ${l === 0 ? 'width-large' : l === 1 ? 'height-large' : ''}`} loading="eager" />
-      ))}
-    </div>
-  ));
-
   return (
-    <section className="section_clients">
-      <div className="padding-global">
-        <div className="title-header">
-          <div className="container-wide">
-            <div className="header">
-              <div className="max-width-medium">
-                <div className="careers_title">
-                  <h2 className="careers_title_heading">Clients</h2>
-                  <div className="h_line_white_30"></div>
-                </div>
-                <div className="spacer-xxlarge"></div>
-                <h2 className="title-2"> इनसे है हमारा <span className="colorful-gradient">गठबंधन </span> </h2>
-                <div className="spacer-xxlarge mobilehidden"></div>
-              </div>
-              <div className="max-width-40">
-                <div className="header_content">
-                  <p className="text-size-20 opacity-100">
-                    Trust, dedication, and excellence are the cornerstones of every relationship we build. It’s not just about delivering results—it’s about creating partnerships that thrive on mutual respect and shared success.
-                  </p>
-                  <div className="spacer-xxlarge"></div>
-                </div>
-              </div>
+    <section className="clients-section">
+      <div className="container">
+        <div className="section-header">
+          <h2>Our Valued Clients</h2>
+          <div className="divider"></div>
+          <p className="subtitle">
+            इनसे है हमारा <span className="highlight">गठबंधन</span>
+          </p>
+          <p className="description">
+            Trust, dedication, and excellence are the cornerstones of every relationship we build. 
+            It's not just about delivering results—it's about creating partnerships that thrive on 
+            mutual respect and shared success.
+          </p>
+        </div>
+        
+        <div className="clients-grid">
+          {clientLogos.map((logo, index) => (
+            <div key={index} className="client-logo-container">
+              <img 
+                src={logo} 
+                alt={`Client ${index + 1}`} 
+                className="client-logo"
+                loading="lazy"
+              />
             </div>
-          </div>
+          ))}
         </div>
       </div>
-      <div className="container-wide">
-        <div className="clients-list_wrap">
-          <div className="clients-list_line">
-            {holders.slice(0,4)}
-          </div>
-          <div className="clients-list_line">
-            {holders.slice(4,8)}
-          </div>
-          <div className="clients-list_line">
-            {holders.slice(8,12)}
-          </div>
-        </div>
-      </div>
-      <div className="spacer-large"></div>
     </section>
   );
 };
