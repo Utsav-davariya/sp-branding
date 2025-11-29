@@ -54,34 +54,76 @@ const About = () => {
               borderRadius: '3px'
             }}></span>
           </h2>
+
+          {/* Company Name Line */}
+          <p
+            style={{
+              marginTop: '1rem',
+              marginBottom: '0.5rem',
+              fontSize: '0.95rem',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              color: 'rgba(255,255,255,0.7)'
+            }}
+          >
+            ( SP Branding India Private Limited )
+          </p>
           
+          {/* Hindi Heading */}
           <h2 style={{
             fontSize: 'clamp(1.8rem, 4vw, 3rem)',
             fontWeight: 800,
-            margin: '1.5rem 0',
+            margin: '1.2rem 0 0.8rem',
             lineHeight: 1.3,
             opacity: 0,
             animation: 'fadeInUp 1s ease-out 0.4s forwards'
           }}>
-            चलो <span style={{
+            चलो{' '}
+            <span style={{
               background: 'linear-gradient(90deg, #4f8fff, #8a2be2)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
               display: 'inline-block',
               whiteSpace: 'nowrap'
-            }}>शुरू</span> से समझाते हैं
+            }}>
+              शुरू
+            </span>{' '}
+            से समझाते हैं
           </h2>
+
+          {/* Bold Tagline */}
+          <p
+            style={{
+              marginTop: '1.2rem',
+              fontSize: 'clamp(1.1rem, 2vw, 1.4rem)',
+              fontWeight: 800,
+              textTransform: 'uppercase',
+              lineHeight: 1.4,
+              color: 'white',
+              opacity: 0,
+              animation: 'fadeInUp 1s ease-out 0.45s forwards'
+            }}
+          >
+            Your <span style={{ color: '#4f8fff' }}>TRUSTED</span> partner<br />
+            for your business
+          </p>
           
+          {/* Main About Content */}
           <p style={{
             fontSize: 'clamp(1rem, 1.4vw, 1.1rem)',
             lineHeight: 1.8,
             color: 'rgba(255, 255, 255, 0.9)',
-            margin: '2rem 0',
+            margin: '2rem 0 0',
             opacity: 0,
             animation: 'fadeInUp 1s ease-out 0.5s forwards'
           }}>
-            We are a dynamic advertising & marketing agency started in 2012 by Mr. Nishant Darji based in Gandhinagar and Ahmedabad, renowned for crafting innovative branding solutions. Recognized as the No.1 real estate branding company, we specialize in groundbreaking outdoor campaigns and advanced digital marketing strategies.
+            SP Branding (India) Pvt. Ltd. has begun with Sakariya Brothers (Mr. Shubham Patel)
+            with a single step of service, gradually expanding its capabilities and offerings.
+            Over the years, the company has grown with a wide range of services in graphic designing.
+            With 5+ years of experience in Designing, Printing, and Brand Development, SP Branding
+            India Pvt. Ltd. now has a dynamic and professional team driven by one single goal –
+            to make our customers feel <strong>WoW…</strong>
           </p>
         </div>
         
@@ -121,17 +163,7 @@ const About = () => {
               transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
               transform: 'translateY(20px)',
               opacity: 0,
-              animation: `fadeInUp 0.6s ease-out ${0.7 + (index * 0.1)}s forwards`,
-              ':hover': {
-                transform: 'translateY(-8px)',
-                boxShadow: '0 15px 40px rgba(79, 143, 255, 0.15)',
-                background: 'rgba(255, 255, 255, 0.05)',
-                borderColor: 'rgba(79, 143, 255, 0.3)'
-              },
-              '@media (max-width: 768px)': {
-                padding: '1.5rem',
-                marginBottom: '1rem'
-              }
+              animation: `fadeInUp 0.6s ease-out ${0.7 + (index * 0.1)}s forwards`
             }}>
               <div style={{
                 fontSize: '2.2rem',
@@ -169,6 +201,10 @@ const About = () => {
       {/* Global Styles */}
       <style jsx global>{`
         @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
           to {
             opacity: 1;
             transform: translateY(0);
