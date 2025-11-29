@@ -43,13 +43,13 @@ function App() {
             <main>
               <section data-reveal="fade-up"><Hero /></section>
               <section data-reveal="fade-up" data-delay="150"><About /></section>
-              <section data-reveal="fade-up" data-delay="200"><VideoPlayer /></section>
+              {/* <section data-reveal="fade-up" data-delay="200"><VideoPlayer /></section> */}
               <section data-reveal="fade-up" data-delay="250"><ServicesHero /></section>
-              <section data-reveal="fade-up" data-delay="300"><WhyChooseUs /></section>
-              <section data-reveal="fade-up" data-delay="200"><DiagSlides /></section>
-              <section data-reveal="fade-up" data-delay="250"><Services /></section>
-              <section data-reveal="fade-up" data-delay="300"><Portfolio /></section>
-              <section data-reveal="fade-up" data-delay="350"><Clients /></section>
+              <section data-reveal="fade-up" data-delay="200"><WhyChooseUs /></section>
+              <section data-reveal="fade-up" data-delay="350"><DiagSlides /></section>
+              <section data-reveal="fade-up" data-delay="400"><Services /></section>
+              <section data-reveal="fade-up" data-delay="450"><Portfolio /></section>
+              <section data-reveal="fade-up" data-delay="500"><Clients /></section>
             </main>
             <Footer />
           </div>
