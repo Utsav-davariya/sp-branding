@@ -41,7 +41,7 @@ const Header = () => {
           src={logoImage} 
           alt="SP Branding Logo"
           style={{
-            height: '150%',
+            height: '230%',
             width: 'auto',
             maxWidth: '280px',
             objectFit: 'contain',
