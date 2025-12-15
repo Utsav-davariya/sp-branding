@@ -90,10 +90,14 @@
 /* Clients Grid */
 .clients-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  /* padding: px; */
   position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+  background: transparent;
 }
 
 .client-logo-container {
@@ -102,13 +106,15 @@
   justify-content: center;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  border-radius: 12px;
-  padding: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  height: 120px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  height: 180px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
 
 .client-logo-container:before {
@@ -135,20 +141,24 @@
 }
 
 .client-logo {
-  max-width: 80%;
-  max-height: 60px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  filter: grayscale(100%) brightness(1.5);
-  opacity: 0.8;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) brightness(0.9);
+  opacity: 0.9;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   z-index: 1;
 }
 
+.client-logo-container:hover {
+  transform: scale(1.02);
+  z-index: 2;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
 .client-logo-container:hover .client-logo {
-  filter: grayscale(0%) brightness(1.2);
+  filter: grayscale(0%) brightness(1.1);
   opacity: 1;
   transform: scale(1.05);
 }
@@ -156,8 +166,13 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .clients-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    padding: 6px;
+  }
+  
+  .client-logo-container {
+    height: 160px;
   }
 }
 
@@ -171,23 +186,29 @@
   }
   
   .client-logo-container {
-    padding: 1.25rem;
-    height: 110px;
+    min-height: 150px;
+    padding: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
   .clients-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    padding: 5px;
   }
   
   .section-header {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   
   .section-header h2 {
     font-size: 1.8rem;
+  }
+  
+  .client-logo-container {
+    height: 130px;
+    padding: 1rem;
   }
   
   .description {
@@ -203,12 +224,13 @@
 @media (max-width: 576px) {
   .clients-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+    gap: 4px;
+    padding: 4px;
   }
   
   .client-logo-container {
-    padding: 1rem;
     height: 100px;
+    padding: 0.8rem;
   }
   
   .section-header h2 {
