@@ -130,12 +130,12 @@
 }
 
 .gallery-row.odd {
-  animation: slideRight 60s linear infinite;
+  animation: slideRight 110s linear infinite;
   animation-play-state: var(--play-state, running);
 }
 
 .gallery-row.even {
-  animation: slideLeft 65s linear infinite;
+  animation: slideLeft 120s linear infinite;
   animation-play-state: var(--play-state, running);
 }
 
@@ -233,49 +233,77 @@
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
+  .diag-section {
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  }
 
   .gallery-row.odd,
   .gallery-row.even {
-    animation: none;
+    animation: slideMobileLeft 60s linear infinite;
+    animation-play-state: var(--play-state, running);
     transform: none;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 2rem;
-    -webkit-overflow-scrolling: touch;
-
-    /* Hide scrollbar */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    overflow-x: hidden;
+    /* Marquee style */
+    width: max-content;
   }
 
-  .gallery-row.odd::-webkit-scrollbar,
-  .gallery-row.even::-webkit-scrollbar {
-    display: none;
+  .gallery-row.even {
+    animation-name: slideMobileRight;
+    margin-left: -100%;
+    /* Start even rows offset to allow right slide */
   }
 
   .gallery-track {
-    width: auto;
-    padding: 0 1.5rem;
+    width: max-content;
+    padding: 0;
   }
 
   .gallery-slide {
-    scroll-snap-align: center;
-    width: 300px;
+    width: 200px;
+    height: 200px;
     transform: none !important;
+    margin: 0;
+    flex-shrink: 0;
+  }
+}
+
+/* Mobile Horizontal Animations */
+@keyframes slideMobileLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slideMobileRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
   }
 }
 
 @media (max-width: 768px) {
   .diag-section {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
 
   .title {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 
   .gallery-slide {
-    width: 260px;
-    aspect-ratio: 1;
+    width: 160px;
+    height: 160px;
+  }
+
+  .gallery-row {
+    margin: 1rem 0;
   }
 }
