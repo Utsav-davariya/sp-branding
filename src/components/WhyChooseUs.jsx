@@ -6,7 +6,7 @@ const WhyChooseUs = () => {
       <section className="agency_showreel">
         <div className="padding-global">
           <div className="title-header">
-            <div className="spacer-xxhuge"></div>
+
             <div className="container-wide">
               <div className="header">
                 <div className="max-width-medium">

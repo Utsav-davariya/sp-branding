@@ -1,6 +1,6 @@
 /* Clients Section */
 .clients-section {
-  padding: 5rem 0;
+  padding: 4rem 0;
   position: relative;
   overflow: hidden;
 }
@@ -24,7 +24,7 @@
   font-size: 2.5rem;
   color: #fff;
   margin-bottom: 1rem;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .divider {
@@ -47,16 +47,24 @@
 }
 
 @keyframes slide {
-  0% { left: -100%; }
-  50% { left: 100%; }
-  100% { left: 100%; }
+  0% {
+    left: -100%;
+  }
+
+  50% {
+    left: 100%;
+  }
+
+  100% {
+    left: 100%;
+  }
 }
 
 .subtitle {
   font-size: 1.5rem;
   color: #fff;
   margin-bottom: 1.5rem;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .highlight {
@@ -84,7 +92,7 @@
   line-height: 1.7;
   max-width: 700px;
   margin: 0 auto;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Clients Grid */
@@ -170,7 +178,7 @@
     gap: 6px;
     padding: 6px;
   }
-  
+
   .client-logo-container {
     height: 160px;
   }
@@ -180,11 +188,11 @@
   .section-header h2 {
     font-size: 2.2rem;
   }
-  
+
   .subtitle {
     font-size: 1.3rem;
   }
-  
+
   .client-logo-container {
     min-height: 150px;
     padding: 1.5rem;
@@ -197,25 +205,25 @@
     gap: 5px;
     padding: 5px;
   }
-  
+
   .section-header {
     margin-bottom: 2rem;
   }
-  
+
   .section-header h2 {
     font-size: 1.8rem;
   }
-  
+
   .client-logo-container {
     height: 130px;
     padding: 1rem;
   }
-  
+
   .description {
     font-size: 1rem;
     padding: 0 1rem;
   }
-  
+
   .client-logo {
     max-width: 90%;
   }
@@ -227,16 +235,16 @@
     gap: 4px;
     padding: 4px;
   }
-  
+
   .client-logo-container {
     height: 100px;
     padding: 0.8rem;
   }
-  
+
   .section-header h2 {
     font-size: 1.6rem;
   }
-  
+
   .subtitle {
     font-size: 1.2rem;
   }

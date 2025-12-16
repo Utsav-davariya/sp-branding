@@ -28,7 +28,7 @@ function App() {
     return (
       <div className="loader centered--vertical">
         <div className="logo-wrap">
-          <div className="text" style={{ display: 'none' }}>SAI Branding</div>
+          <div className="text" style={{ display: 'none' }}>SP Branding</div>
         </div>
       </div>
     );
@@ -41,15 +41,15 @@ function App() {
         <div id="smooth-wrap">
           <div id="smooth-content">
             <main>
-              <section data-reveal="fade-up"><Hero /></section>
-              <section data-reveal="fade-up" data-delay="150"><About /></section>
-              {/* <section data-reveal="fade-up" data-delay="200"><VideoPlayer /></section> */}
-              <section data-reveal="fade-up" data-delay="250"><ServicesHero /></section>
-              <section data-reveal="fade-up" data-delay="200"><WhyChooseUs /></section>
-              <section data-reveal="fade-up" data-delay="350"><DiagSlides /></section>
-              <section data-reveal="fade-up" data-delay="400"><Services /></section>
-              <section data-reveal="fade-up" data-delay="450"><Portfolio /></section>
-              <section data-reveal="fade-up" data-delay="500"><Clients /></section>
+              <div data-reveal="fade-up"><Hero /></div>
+              <div data-reveal="fade-up" data-delay="150"><About /></div>
+              {/* <div data-reveal="fade-up" data-delay="200"><VideoPlayer /></div> */}
+              <div data-reveal="fade-up" data-delay="250"><ServicesHero /></div>
+              <div data-reveal="fade-up" data-delay="200"><WhyChooseUs /></div>
+              <div data-reveal="fade-up" data-delay="350"><DiagSlides /></div>
+              <div data-reveal="fade-up" data-delay="400"><Services /></div>
+              <div data-reveal="fade-up" data-delay="450"><Portfolio /></div>
+              <div data-reveal="fade-up" data-delay="500"><Clients /></div>
             </main>
             <Footer />
           </div>
