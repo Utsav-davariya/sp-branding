@@ -66,18 +66,21 @@ const Hero = () => {
       minHeight: '100vh',
       overflow: 'hidden',
       backgroundColor: '#0a0a14',
-      paddingTop: '80px' // Space for fixed header
+      paddingTop: '90px', // Space for fixed header
+      display: 'flex',
+      alignItems: 'center'
     }}>
       {/* Main Content */}
       <div style={{
-        height: '100%',
+        width: '100%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '0 1rem',
+        padding: '2rem 1rem',
         position: 'relative',
-        zIndex: 2
+        zIndex: 2,
+        marginTop: '-40px' // Pull content up slightly to account for header
       }}>
         <h1 id="home" style={{
           fontSize: 'clamp(2.5rem, 8vw, 5rem)',

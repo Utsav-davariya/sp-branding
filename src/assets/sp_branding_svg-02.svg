@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="TEXTS" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 500 500">
+  <!-- Generator: Adobe Illustrator 30.1.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 136)  -->
+  <defs>
+    <style>
+      .st0 {
+        letter-spacing: .09em;
+      }
+
+      .st0, .st1, .st2 {
+        font-family: GCFodaxDemo-Regular, 'GC Fodax Demo';
+      }
+
+      .st3 {
+        font-size: 16.41px;
+      }
+
+      .st3, .st2 {
+        fill: #fff;
+      }
+
+      .st1 {
+        letter-spacing: .08em;
+      }
+
+      .st4 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        letter-spacing: .08em;
+      }
+
+      .st2 {
+        font-size: 50.59px;
+      }
+
+      .st5 {
+        fill: #257ba8;
+      }
+    </style>
+  </defs>
+  <path class="st5" d="M153,197.81v15.4h8.74c8.5,0,15.39-6.89,15.39-15.39h0s-24.13,0-24.13,0Z"/>
+  <path class="st5" d="M69.36,274.8h24.13v-15.39h-8.74c-8.5,0-15.39,6.89-15.39,15.39Z"/>
+  <rect class="st5" x="100.15" y="250.67" width="15.39" height="39.53"/>
+  <path class="st5" d="M115.54,197.81h15.4v54.93h15.4v-54.93c0-8.5-6.89-15.39-15.39-15.39h-15.41c-8.5,0-15.39,6.89-15.39,15.39v24.13h15.39v-24.13Z"/>
+  <path class="st5" d="M124.28,228.6h-39.53v-15.39h8.74v-15.4h-8.74c-8.5,0-15.39,6.89-15.39,15.39v30.8h54.92v-15.4Z"/>
+  <path class="st5" d="M153,228.6v15.4h8.73v15.4h-39.53v15.39h39.54c8.5,0,15.39-6.89,15.39-15.39v-30.8h-24.13Z"/>
+  <rect class="st5" x="130.94" y="281.46" width="15.4" height="8.74"/>
+  <text class="st2" transform="translate(193.88 246.72)"><tspan x="0" y="0">SP Branding </tspan></text>
+  <text class="st3" transform="translate(248.12 263.92)"><tspan class="st4" x="0" y="0">(</tspan><tspan class="st0" x="6.05" y="0">India</tspan><tspan class="st4" x="45.96" y="0">)</tspan><tspan class="st1" x="52.01" y="0" xml:space="preserve"> Private Limited </tspan></text>
+</svg>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaFacebookF, FaInstagram, FaPhoneAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import logoImage from '../assets/sp_branding_swbsite-02.png';
+import logoImage from '../assets/sp_branding_svg-02.svg';
 
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -86,7 +86,6 @@ const Footer = () => {
               width: 'auto',
               objectFit: 'contain',
               margin: '0 auto 15px',
-              filter: 'brightness(0) invert(1)'
             }}
           />
           <p style={{

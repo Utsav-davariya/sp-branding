@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImage from '../assets/sp_branding_swbsite-02.png';
+import logoImage from '../assets/sp_branding_svg-02.svg';
 
 const Header = () => {
   return (
@@ -9,14 +9,13 @@ const Header = () => {
       left: 0,
       right: 0,
       zIndex: 100,
-      padding: '1.2rem 5%',
+      padding: '0.5rem 5%',
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      // backgroundColor: 'rgba(10, 10, 20, 0.15)',
-      // backdropFilter: 'blur(8px)',
-      // borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
-      height: '110px',
+      // backgroundColor: 'black',
+      backdropFilter: 'blur(8px)',
+      height: '90px',
       boxSizing: 'border-box',
     }}>
       <a href="/" style={{
@@ -24,8 +23,8 @@ const Header = () => {
         display: 'flex',
         alignItems: 'center',
         height: '100%',
-        transform: 'scale(1.2)',
-        transformOrigin: 'left center',
+        display: 'flex',
+        alignItems: 'center',
         transition: 'transform 0.3s ease',
         ':hover': {
           transform: 'scale(1.22) translateX(5px)'
@@ -41,20 +40,20 @@ const Header = () => {
           src={logoImage}
           alt="SP Branding Logo"
           style={{
-            height: '230%',
+            height: '240px',
             width: 'auto',
             maxWidth: '280px',
             objectFit: 'contain',
             '@media (max-width: 768px)': {
-              height: '65px',
+              height: '50px',
               maxWidth: '240px'
             },
             '@media (max-width: 480px)': {
-              height: '55px',
+              height: '45px',
               maxWidth: '200px'
             },
             '@media (max-width: 360px)': {
-              height: '48px',
+              height: '40px',
               maxWidth: '180px'
             }
           }}
