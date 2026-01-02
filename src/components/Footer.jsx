@@ -40,7 +40,7 @@ const Footer = () => {
   };
 
   return (
-    <motion.footer 
+    <motion.footer
       className="footer"
       initial="hidden"
       animate={isVisible ? "visible" : "hidden"}
@@ -78,12 +78,12 @@ const Footer = () => {
           width: '100%',
           marginBottom: '10px'
         }}>
-          <img 
-            src={logoImage} 
+          <img
+            src={logoImage}
             alt="SP Branding Logo"
             style={{
-              height: '200px',
-              width: 'auto',
+              height: '320px',
+              width: '328px',
               objectFit: 'contain',
               margin: '0 auto 15px',
             }}
@@ -101,7 +101,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <motion.div 
+        <motion.div
           className="contact-info"
           variants={itemVariants}
           style={{
@@ -136,7 +136,7 @@ const Footer = () => {
               }
             }
           }}>Contact Us</h3>
-          
+
           <div style={{
             display: 'flex',
             flexWrap: 'wrap',
@@ -149,7 +149,7 @@ const Footer = () => {
             }
           }}>
             {/* Phone */}
-            <motion.a 
+            <motion.a
               href="tel:+917778900614"
               whileHover={{ scale: 1.05 }}
               style={{
@@ -173,7 +173,7 @@ const Footer = () => {
             </motion.a>
 
             {/* Facebook */}
-            <motion.a
+            {/* <motion.a
               href="#"
               target="_blank"
               rel="noopener noreferrer"
@@ -196,7 +196,7 @@ const Footer = () => {
             >
               <FaFacebookF style={{ color: '#1877f2' }} />
               <span>Facebook</span>
-            </motion.a>
+            </motion.a> */}
 
             {/* Instagram */}
             <motion.a
@@ -226,7 +226,7 @@ const Footer = () => {
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="company-info"
           variants={itemVariants}
           style={{

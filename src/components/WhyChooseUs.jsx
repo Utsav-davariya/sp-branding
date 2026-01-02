@@ -16,14 +16,14 @@ const WhyChooseUs = () => {
                 यहां से <span className="highlight">बात</span> बनेगी
               </h2>
             </div>
-            
+
             <div className="description">
               <p className="text">
                 Everyone <span className="highlight">Loves the Likes</span> and{' '}
-                <span className="highlight">We Love the Leads.</span> The reason is simple, 
-                we have a creative advertising and branding strategy. You choose us because 
-                we never compromise on creativity. Being original isn't a challenge for us; 
-                it's second nature of SAI.
+                <span className="highlight">We Love the Leads.</span> The reason is simple,
+                we have a creative advertising and branding strategy. You choose us because
+                we never compromise on creativity. Being original isn't a challenge for us;
+                it's second nature of <span className="highlight">SP BRANDING.</span>
               </p>
             </div>
           </div>
